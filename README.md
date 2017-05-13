@@ -7,6 +7,15 @@ that can make the use of `std::panic::catch_unwind` more convenient.
 Plese note, that stack unwinding is not an idiomatic Rust error handling
 (but may be useful nonetheless).
 
+`Cargo.toml`:
+
+```toml
+    [dependencies]
+    errloc_macros = "0.1.0"
+```
+
+Link to [API docs](https://docs.rs/errloc_macros/).
+
 Usage example
 -------------
 
