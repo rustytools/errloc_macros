@@ -2,3 +2,10 @@
 name = "errloc_macros"
 version = "0.1.0"
 authors = ["rustytools"]
+
+license = "Apache-2.0"
+description = "Error location utility macros"
+documentation = "https://docs.rs/errloc_macros/"
+repository = "https://github.com/rustytools/errloc_macros"
+keywords = ["unwind", "panic", "location"]
+categories = ["rust-patterns"]
