@@ -1,4 +1,4 @@
 [package]
-name = "err_macros"
+name = "errloc_macros"
 version = "0.1.0"
 authors = ["rustytools"]
