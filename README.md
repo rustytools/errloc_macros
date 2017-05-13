@@ -15,11 +15,11 @@ Usage example
     extern crate errloc_macros;
 
     std::panic::catch_unwind(|| {
-		foo.api_call_that_shoud_not_fail.expect(errloc!());
-	}).unwrap_or_else(|e| {
+        foo.api_call_that_shoud_not_fail.expect(errloc!());
+    }).unwrap_or_else(|e| {
         // output will include the location of "expect" call
-		println!("Fatal fail: {:?}", errloc_macros::msg(&e));
-	});
+        println!("Fatal fail: {:?}", errloc_macros::msg(&e));
+    });
 ```
 
 License information

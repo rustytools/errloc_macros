@@ -59,13 +59,13 @@ macro_rules! errlocm {
 ///});
 /// ```
 pub fn msg<'a>(e: &'a std::boxed::Box<std::any::Any + std::marker::Send + 'static>) -> &'a str {
-	match e.downcast_ref::<&str>() {
-		Some(st) => st,
-		None => {
+    match e.downcast_ref::<&str>() {
+        Some(st) => st,
+        None => {
             match e.downcast_ref::<std::string::String>() {
                 Some(stw) => stw.as_str(),
                 None => "()",
             }
-		},
-	}
+        },
+    }
 }
