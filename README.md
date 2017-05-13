@@ -10,8 +10,8 @@ Plese note, that stack unwinding is not an idiomatic Rust error handling
 `Cargo.toml`:
 
 ```toml
-    [dependencies]
-    errloc_macros = "0.1.0"
+[dependencies]
+errloc_macros = "0.1.0"
 ```
 
 Link to [API docs](https://docs.rs/errloc_macros/).
@@ -20,15 +20,15 @@ Usage example
 -------------
 
 ```rust
-    #[macro_use]
-    extern crate errloc_macros;
+#[macro_use]
+extern crate errloc_macros;
 
-    std::panic::catch_unwind(|| {
-        foo.api_call_that_shoud_not_fail.expect(errloc!());
-    }).unwrap_or_else(|e| {
-        // output will include the location of "expect" call
-        println!("Fatal fail: {:?}", errloc_macros::msg(&e));
-    });
+std::panic::catch_unwind(|| {
+    foo.api_call_that_shoud_not_fail.expect(errloc!());
+}).unwrap_or_else(|e| {
+    // output will include the location of "expect" call
+    println!("Fatal fail: {:?}", errloc_macros::msg(&e));
+});
 ```
 
 License information
